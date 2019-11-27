@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // https://mayan29.oss-cn-beijing.aliyuncs.com/wechat-public-account/info/wow36kr.json
 }
 
 
