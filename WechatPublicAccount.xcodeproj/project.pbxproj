@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5A405A238E86B000E6EAF2 /* AccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */; };
+		BC5A405D238E86C900E6EAF2 /* AccountListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A405C238E86C900E6EAF2 /* AccountListCell.m */; };
+		BC5A4061238E87F700E6EAF2 /* GeneralMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */; };
+		BC5A4064238E880700E6EAF2 /* GeneralMsgListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */; };
 		BCD8DC6D238CB9D6000137AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6C238CB9D6000137AF /* AppDelegate.m */; };
 		BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6F238CB9D6000137AF /* SceneDelegate.m */; };
-		BCD8DC73238CB9D6000137AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC72238CB9D6000137AF /* ViewController.m */; };
 		BCD8DC76238CB9D6000137AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC74238CB9D6000137AF /* Main.storyboard */; };
 		BCD8DC78238CB9D8000137AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC77238CB9D8000137AF /* Assets.xcassets */; };
 		BCD8DC7B238CB9D8000137AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC79238CB9D8000137AF /* LaunchScreen.storyboard */; };
@@ -17,13 +20,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5A4058238E86B000E6EAF2 /* AccountListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountListViewController.h; sourceTree = "<group>"; };
+		BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountListViewController.m; sourceTree = "<group>"; };
+		BC5A405B238E86C900E6EAF2 /* AccountListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountListCell.h; sourceTree = "<group>"; };
+		BC5A405C238E86C900E6EAF2 /* AccountListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountListCell.m; sourceTree = "<group>"; };
+		BC5A405F238E87F700E6EAF2 /* GeneralMsgListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListViewController.h; sourceTree = "<group>"; };
+		BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListViewController.m; sourceTree = "<group>"; };
+		BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListCell.h; sourceTree = "<group>"; };
+		BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListCell.m; sourceTree = "<group>"; };
 		BCD8DC68238CB9D6000137AF /* WechatPublicAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatPublicAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD8DC6B238CB9D6000137AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCD8DC6C238CB9D6000137AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BCD8DC6E238CB9D6000137AF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BCD8DC6F238CB9D6000137AF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BCD8DC71238CB9D6000137AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BCD8DC72238CB9D6000137AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BCD8DC75238CB9D6000137AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCD8DC77238CB9D8000137AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD8DC7A238CB9D8000137AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +51,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC5A4057238E869400E6EAF2 /* AccountListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A4058238E86B000E6EAF2 /* AccountListViewController.h */,
+				BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */,
+				BC5A405B238E86C900E6EAF2 /* AccountListCell.h */,
+				BC5A405C238E86C900E6EAF2 /* AccountListCell.m */,
+			);
+			path = AccountListViewController;
+			sourceTree = "<group>";
+		};
+		BC5A405E238E87E000E6EAF2 /* GeneralMsgListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A405F238E87F700E6EAF2 /* GeneralMsgListViewController.h */,
+				BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */,
+				BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */,
+				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
+			);
+			path = GeneralMsgListViewController;
+			sourceTree = "<group>";
+		};
 		BCD8DC5F238CB9D6000137AF = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +92,12 @@
 		BCD8DC6A238CB9D6000137AF /* WechatPublicAccount */ = {
 			isa = PBXGroup;
 			children = (
+				BC5A4057238E869400E6EAF2 /* AccountListViewController */,
+				BC5A405E238E87E000E6EAF2 /* GeneralMsgListViewController */,
 				BCD8DC6B238CB9D6000137AF /* AppDelegate.h */,
 				BCD8DC6C238CB9D6000137AF /* AppDelegate.m */,
 				BCD8DC6E238CB9D6000137AF /* SceneDelegate.h */,
 				BCD8DC6F238CB9D6000137AF /* SceneDelegate.m */,
-				BCD8DC71238CB9D6000137AF /* ViewController.h */,
-				BCD8DC72238CB9D6000137AF /* ViewController.m */,
 				BCD8DC74238CB9D6000137AF /* Main.storyboard */,
 				BCD8DC77238CB9D8000137AF /* Assets.xcassets */,
 				BCD8DC79238CB9D8000137AF /* LaunchScreen.storyboard */,
@@ -146,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD8DC73238CB9D6000137AF /* ViewController.m in Sources */,
 				BCD8DC6D238CB9D6000137AF /* AppDelegate.m in Sources */,
+				BC5A4061238E87F700E6EAF2 /* GeneralMsgListViewController.m in Sources */,
 				BCD8DC7E238CB9D8000137AF /* main.m in Sources */,
+				BC5A405A238E86B000E6EAF2 /* AccountListViewController.m in Sources */,
 				BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */,
+				BC5A405D238E86C900E6EAF2 /* AccountListCell.m in Sources */,
+				BC5A4064238E880700E6EAF2 /* GeneralMsgListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
