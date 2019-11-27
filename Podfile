@@ -7,5 +7,6 @@ pod 'SSZipArchive'
 pod 'SDWebImage', '~> 5.0'
 pod 'YYCategories'
 pod 'MJRefresh'
+pod 'MagicalRecord'
 
 end

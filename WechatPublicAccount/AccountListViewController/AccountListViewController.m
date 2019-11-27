@@ -8,6 +8,7 @@
 
 #import "AccountListViewController.h"
 #import "AccountListCell.h"
+#import "AccountListManager.h"
 #import "GeneralMsgListViewController.h"
 
 @interface AccountListViewController ()
