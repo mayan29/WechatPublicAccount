@@ -10,9 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Account;
 @interface AccountListCell : UITableViewCell
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
++ (instancetype)cellWithTableView:(UITableView *)tableView account:(Account *)account;
 
 @end
 

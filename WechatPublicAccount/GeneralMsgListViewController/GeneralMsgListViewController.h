@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Account;
 @interface GeneralMsgListViewController : UITableViewController
+
+@property (nonatomic, strong) Account *account;
 
 @end
 

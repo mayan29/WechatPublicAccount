@@ -8,6 +8,7 @@
 
 #import "GeneralMsgListViewController.h"
 #import "GeneralMsgListCell.h"
+#import "Account+CoreDataClass.h"
 
 @interface GeneralMsgListViewController ()
 
@@ -17,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = self.account.nick_name;
 }
 
 
