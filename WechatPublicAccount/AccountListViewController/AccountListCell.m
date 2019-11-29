@@ -33,6 +33,15 @@
     return cell;
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.detailTextLabel.numberOfLines = 0;
+        self.detailTextLabel.textColor = UIColor.darkGrayColor;
+    }
+    return self;
+}
+
 - (void)layoutSubviews {
     UIImage *image = self.imageView.image;
     self.imageView.image = self.placeholderImage;

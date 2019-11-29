@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Account+CoreDataClass.h"
+#import "GeneralMsg+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,9 @@ typedef void (^CoreDataManagerSaveCompletionHandler)(BOOL contextDidSave, NSErro
 
 - (void)updateAccountsWithDataArray:(NSArray *)dataArray completed:(CoreDataManagerSaveCompletionHandler)completedBlock;
 - (NSArray<Account *> *)accounts;
+
+- (void)updateGeneralMsgsWithDataArray:(NSArray *)dataArray completed:(CoreDataManagerSaveCompletionHandler)completedBlock;
+- (NSArray<GeneralMsg *> *)generalMsgs;
 
 @end
 

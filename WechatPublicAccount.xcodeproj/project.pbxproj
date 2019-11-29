@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9FB93A5C074A2B7A6C8D43AE /* libPods-WechatPublicAccount.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6595AFE7C40886E1578FECB /* libPods-WechatPublicAccount.a */; };
+		BC0A9BA1238FF7460072BB0C /* GeneralMsgListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9BA0238FF7460072BB0C /* GeneralMsgListManager.m */; };
 		BC5A405A238E86B000E6EAF2 /* AccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */; };
 		BC5A405D238E86C900E6EAF2 /* AccountListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A405C238E86C900E6EAF2 /* AccountListCell.m */; };
 		BC5A4061238E87F700E6EAF2 /* GeneralMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */; };
@@ -25,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		39BEB5B33CEF7BDA6A9B41BE /* Pods-WechatPublicAccount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatPublicAccount.release.xcconfig"; path = "Target Support Files/Pods-WechatPublicAccount/Pods-WechatPublicAccount.release.xcconfig"; sourceTree = "<group>"; };
+		BC0A9B9F238FF7460072BB0C /* GeneralMsgListManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListManager.h; sourceTree = "<group>"; };
+		BC0A9BA0238FF7460072BB0C /* GeneralMsgListManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListManager.m; sourceTree = "<group>"; };
 		BC5A4058238E86B000E6EAF2 /* AccountListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountListViewController.h; sourceTree = "<group>"; };
 		BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountListViewController.m; sourceTree = "<group>"; };
 		BC5A405B238E86C900E6EAF2 /* AccountListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountListCell.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */,
 				BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */,
 				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
+				BC0A9B9F238FF7460072BB0C /* GeneralMsgListManager.h */,
+				BC0A9BA0238FF7460072BB0C /* GeneralMsgListManager.m */,
 			);
 			path = GeneralMsgListViewController;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				BC5A4061238E87F700E6EAF2 /* GeneralMsgListViewController.m in Sources */,
 				BCD8DC7E238CB9D8000137AF /* main.m in Sources */,
 				BC5A406B238E90DE00E6EAF2 /* CoreDataManager.m in Sources */,
+				BC0A9BA1238FF7460072BB0C /* GeneralMsgListManager.m in Sources */,
 				BC5A4067238E8CE700E6EAF2 /* AccountListManager.m in Sources */,
 				BC5A405A238E86B000E6EAF2 /* AccountListViewController.m in Sources */,
 				BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */,
