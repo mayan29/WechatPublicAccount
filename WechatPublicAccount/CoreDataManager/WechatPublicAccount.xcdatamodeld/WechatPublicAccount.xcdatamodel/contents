@@ -16,6 +16,7 @@
         <attribute name="cover" optional="YES" attributeType="String"/>
         <attribute name="digest" optional="YES" attributeType="String"/>
         <attribute name="p_generalMsgId" optional="YES" attributeType="String"/>
+        <attribute name="p_orderNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="GeneralMsg" representedClassName="GeneralMsg" syncable="YES" codeGenerationType="class">
@@ -27,7 +28,7 @@
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="AppMsg" positionX="-54" positionY="36" width="128" height="163"/>
+        <element name="AppMsg" positionX="-54" positionY="36" width="128" height="178"/>
         <element name="GeneralMsg" positionX="-63" positionY="27" width="128" height="118"/>
     </elements>
 </model>

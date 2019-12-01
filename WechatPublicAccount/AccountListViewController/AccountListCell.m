@@ -27,7 +27,6 @@
     AccountListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[AccountListCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-        cell.detailTextLabel.numberOfLines = 0;
     }
     cell.account = account;
     return cell;

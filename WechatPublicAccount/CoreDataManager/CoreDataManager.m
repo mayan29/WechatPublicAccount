@@ -73,10 +73,11 @@
                 generalMsg.type     = [NSString stringWithFormat:@"%@", comm_msg_info[@"type"]];
                 generalMsg.p_wxId   = accountId;
                 
-                if (comm_msg_info[@"content"]) {
+                if ([comm_msg_info[@"content"] length] > 0) {
                     AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
-                    appMsg.content = comm_msg_info[@"content"];
+                    appMsg.content        = comm_msg_info[@"content"];
                     appMsg.p_generalMsgId = generalMsg.id;
+                    appMsg.p_orderNo      = 0;
                     
                     [generalMsg addApp_msg_listObject:appMsg];
                 }
@@ -86,6 +87,7 @@
                     appMsg.content_url    = image_msg_ext_info[@"cdn_url"];
                     appMsg.cover          = image_msg_ext_info[@"cdn_url"];
                     appMsg.p_generalMsgId = generalMsg.id;
+                    appMsg.p_orderNo      = 1;
                     
                     [generalMsg addApp_msg_listObject:appMsg];
                 }
@@ -102,11 +104,16 @@
                         appMsg.digest         = app_msg_ext_info[@"digest"];
                         appMsg.title          = app_msg_ext_info[@"title"];
                         appMsg.p_generalMsgId = generalMsg.id;
+                        appMsg.p_orderNo      = 2;
                         
                         [generalMsg addApp_msg_listObject:appMsg];
                     }
-                    if (app_msg_ext_info[@"multi_app_msg_item_list"]) {
-                        for (NSDictionary *multi_app_msg_item in app_msg_ext_info[@"multi_app_msg_item_list"]) {
+                    
+                    NSArray *multi_app_msg_item_list = app_msg_ext_info[@"multi_app_msg_item_list"];
+                    if (multi_app_msg_item_list) {
+                        for (int i = 0; i < multi_app_msg_item_list.count; i++) {
+                            NSDictionary *multi_app_msg_item = multi_app_msg_item_list[i];
+                            
                             AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
                             appMsg.author         = multi_app_msg_item[@"author"];
                             appMsg.content        = multi_app_msg_item[@"content"];
@@ -116,6 +123,7 @@
                             appMsg.digest         = multi_app_msg_item[@"digest"];
                             appMsg.title          = multi_app_msg_item[@"title"];
                             appMsg.p_generalMsgId = generalMsg.id;
+                            appMsg.p_orderNo      = 10 + i;
                             
                             [generalMsg addApp_msg_listObject:appMsg];
                         }
@@ -130,8 +138,9 @@
     }];
 }
 
-- (NSArray<GeneralMsg *> *)generalMsgs {
-    return [GeneralMsg MR_findAll];
+- (NSArray<GeneralMsg *> *)generalMsgsWithAccountId:(NSString *)accountId {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"p_wxId = %@", accountId];
+    return [GeneralMsg MR_findAllSortedBy:@"datetime" ascending:YES withPredicate:predicate];
 }
 
 

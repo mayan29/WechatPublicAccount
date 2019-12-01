@@ -17,7 +17,6 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
-  - MJRefresh (3.2.0)
   - SDWebImage (5.1.0):
     - SDWebImage/Core (= 5.1.0)
   - SDWebImage/Core (5.1.0)
@@ -29,16 +28,14 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - MagicalRecord
-  - MJRefresh
   - SDWebImage (~> 5.0)
   - SSZipArchive
   - YYCategories
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - MagicalRecord
-    - MJRefresh
     - SDWebImage
     - SSZipArchive
     - YYCategories
@@ -46,11 +43,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 68e9ea6e25ee2136cd53689d4fd0412e9442f486
+PODFILE CHECKSUM: d1e77f20d09a39e00e64c3507c5754d438a0bf37
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.4

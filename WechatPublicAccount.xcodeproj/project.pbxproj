@@ -16,6 +16,7 @@
 		BC5A4067238E8CE700E6EAF2 /* AccountListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4066238E8CE600E6EAF2 /* AccountListManager.m */; };
 		BC5A406B238E90DE00E6EAF2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A406A238E90DE00E6EAF2 /* CoreDataManager.m */; };
 		BC5A406E238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC5A406C238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodeld */; };
+		BCB1D1BD2393835100023A94 /* GeneralMsgListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */; };
 		BCD8DC6D238CB9D6000137AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6C238CB9D6000137AF /* AppDelegate.m */; };
 		BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6F238CB9D6000137AF /* SceneDelegate.m */; };
 		BCD8DC76238CB9D6000137AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC74238CB9D6000137AF /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 		BC5A4069238E90DE00E6EAF2 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		BC5A406A238E90DE00E6EAF2 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		BC5A406D238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WechatPublicAccount.xcdatamodel; sourceTree = "<group>"; };
+		BCB1D1BB2393835100023A94 /* GeneralMsgListHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListHeaderView.h; sourceTree = "<group>"; };
+		BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListHeaderView.m; sourceTree = "<group>"; };
 		BCD8DC68238CB9D6000137AF /* WechatPublicAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatPublicAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD8DC6B238CB9D6000137AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCD8DC6C238CB9D6000137AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */,
 				BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */,
 				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
+				BCB1D1BB2393835100023A94 /* GeneralMsgListHeaderView.h */,
+				BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */,
 				BC0A9B9F238FF7460072BB0C /* GeneralMsgListManager.h */,
 				BC0A9BA0238FF7460072BB0C /* GeneralMsgListManager.m */,
 			);
@@ -168,7 +173,6 @@
 				BCD8DC64238CB9D6000137AF /* Sources */,
 				BCD8DC65238CB9D6000137AF /* Frameworks */,
 				BCD8DC66238CB9D6000137AF /* Resources */,
-				2B677604B4900A81E8724522 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,28 +229,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B677604B4900A81E8724522 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WechatPublicAccount/Pods-WechatPublicAccount-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WechatPublicAccount/Pods-WechatPublicAccount-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		57B07C9D3C6D08FA1ECE13C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +268,7 @@
 				BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */,
 				BC5A405D238E86C900E6EAF2 /* AccountListCell.m in Sources */,
 				BC5A406E238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodeld in Sources */,
+				BCB1D1BD2393835100023A94 /* GeneralMsgListHeaderView.m in Sources */,
 				BC5A4064238E880700E6EAF2 /* GeneralMsgListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

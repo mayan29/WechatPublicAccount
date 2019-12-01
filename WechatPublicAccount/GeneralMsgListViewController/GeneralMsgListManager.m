@@ -27,7 +27,7 @@
 
 #pragma mark - Public Methods
 
-- (void)fetchGeneralMsgListWithId:(NSString *)accountId isFromNetwork:(BOOL)isFromNetwork completed:(void (^)(NSArray<GeneralMsg *> * _Nonnull, NSError * _Nonnull))completedBlock {
+- (void)fetchGeneralMsgListWithId:(NSString *)accountId isFromNetwork:(BOOL)isFromNetwork completed:(void (^)(NSArray<GeneralMsg *> * _Nonnull, NSError * __nullable))completedBlock {
     if (isFromNetwork) {
         [self downloadZipWithId:accountId completed:^(NSURLResponse * _Nonnull response, NSURL * _Nonnull filePath, NSError * _Nonnull error) {
             
@@ -60,11 +60,15 @@
                 
                 [[CoreDataManager shareInstance] updateGeneralMsgsWithDataArray:responseObjects accountId:accountId completed:^(BOOL contextDidSave, NSError * _Nullable error) {
                     if (completedBlock) {
-                        completedBlock([[CoreDataManager shareInstance] generalMsgs], error);
+                        completedBlock([[CoreDataManager shareInstance] generalMsgsWithAccountId:accountId], error);
                     }
                 }];
             }];
         }];
+    } else {
+        if (completedBlock) {
+            completedBlock([[CoreDataManager shareInstance] generalMsgsWithAccountId:accountId], nil);
+        }
     }
 }
 
