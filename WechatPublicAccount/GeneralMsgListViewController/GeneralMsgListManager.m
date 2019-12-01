@@ -58,7 +58,7 @@
                     }
                 }
                 
-                [[CoreDataManager shareInstance] updateGeneralMsgsWithDataArray:responseObjects completed:^(BOOL contextDidSave, NSError * _Nullable error) {
+                [[CoreDataManager shareInstance] updateGeneralMsgsWithDataArray:responseObjects accountId:accountId completed:^(BOOL contextDidSave, NSError * _Nullable error) {
                     if (completedBlock) {
                         completedBlock([[CoreDataManager shareInstance] generalMsgs], error);
                     }

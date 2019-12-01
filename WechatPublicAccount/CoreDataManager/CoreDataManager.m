@@ -58,12 +58,80 @@
     return [Account MR_findAll];
 }
 
-- (void)updateGeneralMsgsWithDataArray:(NSArray *)dataArray completed:(CoreDataManagerSaveCompletionHandler)completedBlock {
-    
+- (void)updateGeneralMsgsWithDataArray:(NSArray *)dataArray accountId:(NSString *)accountId completed:(CoreDataManagerSaveCompletionHandler)completedBlock {
+    [[NSManagedObjectContext MR_defaultContext] MR_saveWithBlock:^(NSManagedObjectContext * _Nonnull localContext) {
+        for (NSDictionary *data in dataArray) {
+            if (![GeneralMsg MR_findFirstByAttribute:@"id" withValue:data[@"comm_msg_info"][@"id"]]) {
+                
+                NSDictionary *comm_msg_info      = data[@"comm_msg_info"];
+                NSDictionary *image_msg_ext_info = data[@"image_msg_ext_info"];
+                NSDictionary *app_msg_ext_info   = data[@"app_msg_ext_info"];
+                
+                GeneralMsg *generalMsg = [GeneralMsg MR_createEntityInContext:localContext];
+                generalMsg.id       = [NSString stringWithFormat:@"%@", comm_msg_info[@"id"]];
+                generalMsg.datetime = [NSString stringWithFormat:@"%@", comm_msg_info[@"datetime"]];
+                generalMsg.type     = [NSString stringWithFormat:@"%@", comm_msg_info[@"type"]];
+                generalMsg.p_wxId   = accountId;
+                
+                if (comm_msg_info[@"content"]) {
+                    AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
+                    appMsg.content = comm_msg_info[@"content"];
+                    appMsg.p_generalMsgId = generalMsg.id;
+                    
+                    [generalMsg addApp_msg_listObject:appMsg];
+                }
+                
+                if (image_msg_ext_info) {
+                    AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
+                    appMsg.content_url    = image_msg_ext_info[@"cdn_url"];
+                    appMsg.cover          = image_msg_ext_info[@"cdn_url"];
+                    appMsg.p_generalMsgId = generalMsg.id;
+                    
+                    [generalMsg addApp_msg_listObject:appMsg];
+                }
+                
+                if (app_msg_ext_info) {
+                    // 可能 app_msg_ext_info 为空，但是 multi_app_msg_item_list 中有数据
+                    if ([app_msg_ext_info[@"content_url"] length]) {
+                        AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
+                        appMsg.author         = app_msg_ext_info[@"author"];
+                        appMsg.content        = app_msg_ext_info[@"content"];
+                        appMsg.content_url    = app_msg_ext_info[@"content_url"];
+                        appMsg.copyright_stat = [NSString stringWithFormat:@"%@", app_msg_ext_info[@"copyright_stat"]];
+                        appMsg.cover          = app_msg_ext_info[@"cover"];
+                        appMsg.digest         = app_msg_ext_info[@"digest"];
+                        appMsg.title          = app_msg_ext_info[@"title"];
+                        appMsg.p_generalMsgId = generalMsg.id;
+                        
+                        [generalMsg addApp_msg_listObject:appMsg];
+                    }
+                    if (app_msg_ext_info[@"multi_app_msg_item_list"]) {
+                        for (NSDictionary *multi_app_msg_item in app_msg_ext_info[@"multi_app_msg_item_list"]) {
+                            AppMsg *appMsg = [AppMsg MR_createEntityInContext:localContext];
+                            appMsg.author         = multi_app_msg_item[@"author"];
+                            appMsg.content        = multi_app_msg_item[@"content"];
+                            appMsg.content_url    = multi_app_msg_item[@"content_url"];
+                            appMsg.copyright_stat = [NSString stringWithFormat:@"%@", app_msg_ext_info[@"copyright_stat"]];
+                            appMsg.cover          = multi_app_msg_item[@"cover"];
+                            appMsg.digest         = multi_app_msg_item[@"digest"];
+                            appMsg.title          = multi_app_msg_item[@"title"];
+                            appMsg.p_generalMsgId = generalMsg.id;
+                            
+                            [generalMsg addApp_msg_listObject:appMsg];
+                        }
+                    }
+                }
+            }
+        }
+    } completion:^(BOOL contextDidSave, NSError * _Nullable error) {
+        if (completedBlock) {
+            completedBlock(contextDidSave, error);
+        }
+    }];
 }
 
 - (NSArray<GeneralMsg *> *)generalMsgs {
-    return @[];
+    return [GeneralMsg MR_findAll];
 }
 
 
