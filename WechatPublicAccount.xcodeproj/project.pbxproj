@@ -17,6 +17,7 @@
 		BC5A406B238E90DE00E6EAF2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A406A238E90DE00E6EAF2 /* CoreDataManager.m */; };
 		BC5A406E238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC5A406C238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodeld */; };
 		BCB1D1BD2393835100023A94 /* GeneralMsgListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */; };
+		BCB1D1C32393D83700023A94 /* GeneralMsgListImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB1D1C22393D83700023A94 /* GeneralMsgListImageViewController.m */; };
 		BCD8DC6D238CB9D6000137AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6C238CB9D6000137AF /* AppDelegate.m */; };
 		BCD8DC70238CB9D6000137AF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC6F238CB9D6000137AF /* SceneDelegate.m */; };
 		BCD8DC76238CB9D6000137AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC74238CB9D6000137AF /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		BC5A406D238E918E00E6EAF2 /* WechatPublicAccount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WechatPublicAccount.xcdatamodel; sourceTree = "<group>"; };
 		BCB1D1BB2393835100023A94 /* GeneralMsgListHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListHeaderView.h; sourceTree = "<group>"; };
 		BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListHeaderView.m; sourceTree = "<group>"; };
+		BCB1D1C12393D83700023A94 /* GeneralMsgListImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMsgListImageViewController.h; sourceTree = "<group>"; };
+		BCB1D1C22393D83700023A94 /* GeneralMsgListImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralMsgListImageViewController.m; sourceTree = "<group>"; };
 		BCD8DC68238CB9D6000137AF /* WechatPublicAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatPublicAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD8DC6B238CB9D6000137AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCD8DC6C238CB9D6000137AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
 				BCB1D1BB2393835100023A94 /* GeneralMsgListHeaderView.h */,
 				BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */,
+				BCB1D1C12393D83700023A94 /* GeneralMsgListImageViewController.h */,
+				BCB1D1C22393D83700023A94 /* GeneralMsgListImageViewController.m */,
 				BC0A9B9F238FF7460072BB0C /* GeneralMsgListManager.h */,
 				BC0A9BA0238FF7460072BB0C /* GeneralMsgListManager.m */,
 			);
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB1D1C32393D83700023A94 /* GeneralMsgListImageViewController.m in Sources */,
 				BCD8DC6D238CB9D6000137AF /* AppDelegate.m in Sources */,
 				BC5A4061238E87F700E6EAF2 /* GeneralMsgListViewController.m in Sources */,
 				BCD8DC7E238CB9D8000137AF /* main.m in Sources */,

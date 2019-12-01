@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @class AppMsg;
 @interface GeneralMsgListCell : UITableViewCell
 
+@property (nonatomic, copy) void (^imageViewClickBlock)(NSString *cover);
+
 + (instancetype)cellWithTableView:(UITableView *)tableView appMsg:(AppMsg *)appMsg;
 
 @end

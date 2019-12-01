@@ -9,6 +9,7 @@
 #import "GeneralMsgListViewController.h"
 #import "GeneralMsgListCell.h"
 #import "GeneralMsgListHeaderView.h"
+#import "GeneralMsgListImageViewController.h"
 #import "GeneralMsgListManager.h"
 #import "Account+CoreDataClass.h"
 #import <YYCategories.h>
@@ -84,6 +85,12 @@
     GeneralMsg *generalMsg = self.generalMsgArray[indexPath.section];
     AppMsg *appMsg = [self appMsgArrayWithGeneralMsg:generalMsg][indexPath.row];
     GeneralMsgListCell *cell = [GeneralMsgListCell cellWithTableView:tableView appMsg:appMsg];
+    cell.imageViewClickBlock = ^(NSString * _Nonnull cover) {
+        GeneralMsgListImageViewController *vc = [[GeneralMsgListImageViewController alloc] init];
+        vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        vc.cover = appMsg.cover;
+        [self presentViewController:vc animated:NO completion:nil];
+    };
     return cell;
 }
 

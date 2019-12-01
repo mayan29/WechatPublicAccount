@@ -42,6 +42,17 @@
     return self;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGPoint point = [touches.anyObject locationInView:self];
+    if (CGRectContainsPoint(self.imageView.frame, point)) {
+        if (self.imageViewClickBlock) {
+            self.imageViewClickBlock(self.appMsg.cover);
+        }
+    } else {
+        [super touchesBegan:touches withEvent:event];
+    }
+}
+
 
 #pragma mark - Setter
 
@@ -58,9 +69,7 @@
         UIGraphicsEndImageContext();
     }];
     self.textLabel.text = appMsg.title ?: appMsg.content;
-    self.detailTextLabel.text = appMsg.digest;
-    
-    [self setNeedsLayout];
+    self.detailTextLabel.text = appMsg.digest;    
 }
 
 
