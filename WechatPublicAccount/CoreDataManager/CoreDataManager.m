@@ -143,5 +143,25 @@
     return [GeneralMsg MR_findAllSortedBy:@"datetime" ascending:YES withPredicate:predicate];
 }
 
+- (void)deleteAppMsg:(AppMsg *)appMsg withGeneralMsg:(GeneralMsg *)generalMsg completed:(void (^)(GeneralMsg * _Nullable))completedBlock {
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveWithBlock:^(NSManagedObjectContext * _Nonnull localContext) {
+        if (generalMsg.app_msg_list.count == 1) {
+            [generalMsg MR_deleteEntityInContext:localContext];
+        } else {
+            [generalMsg removeApp_msg_listObject:appMsg];
+            [appMsg MR_deleteEntityInContext:localContext];
+        }
+    } completion:^(BOOL contextDidSave, NSError * _Nullable error) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %@", generalMsg.id];
+        GeneralMsg *newGeneralMsg = [GeneralMsg MR_findFirstWithPredicate:predicate];
+        
+        if (completedBlock) {
+            completedBlock(newGeneralMsg);
+        }
+    }];
+
+}
+
 
 @end

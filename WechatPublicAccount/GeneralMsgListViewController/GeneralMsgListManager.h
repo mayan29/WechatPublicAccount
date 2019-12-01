@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GeneralMsg+CoreDataClass.h"
+#import "AppMsg+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareInstance;
 
 - (void)fetchGeneralMsgListWithId:(NSString *)accountId isFromNetwork:(BOOL)isFromNetwork completed:(void (^)(NSArray<GeneralMsg *> *, NSError * __nullable))completedBlock;
+- (void)deleteAppMsg:(AppMsg *)appMsg withGeneralMsg:(GeneralMsg *)generalMsg completed:(void (^)(GeneralMsg * _Nullable))completedBlock;
 
 @end
 

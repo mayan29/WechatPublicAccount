@@ -72,6 +72,14 @@
     }
 }
 
+- (void)deleteAppMsg:(AppMsg *)appMsg withGeneralMsg:(GeneralMsg *)generalMsg completed:(void (^)(GeneralMsg * _Nullable))completedBlock {
+    [[CoreDataManager shareInstance] deleteAppMsg:appMsg withGeneralMsg:generalMsg completed:^(GeneralMsg * _Nullable newGeneralMsg) {
+        if (completedBlock) {
+            completedBlock(newGeneralMsg);
+        }
+    }];
+}
+
 
 #pragma mark - Pravite Methods
 

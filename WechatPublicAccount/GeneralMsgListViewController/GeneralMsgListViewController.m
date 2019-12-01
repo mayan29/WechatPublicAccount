@@ -11,10 +11,11 @@
 #import "GeneralMsgListHeaderView.h"
 #import "GeneralMsgListManager.h"
 #import "Account+CoreDataClass.h"
+#import <YYCategories.h>
 
 @interface GeneralMsgListViewController ()
 
-@property (nonatomic, strong) NSArray<GeneralMsg *> *generalMsgArray;
+@property (nonatomic, strong) NSMutableArray<GeneralMsg *> *generalMsgArray;
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSArray<AppMsg *> *> *appMsgListMap;
 
 @end
@@ -54,7 +55,7 @@
 
 - (void)fetchGeneralMsgArrayWithIsFromNetwork:(BOOL)isFromNetwork {
     [[GeneralMsgListManager shareInstance] fetchGeneralMsgListWithId:self.account.id isFromNetwork:isFromNetwork completed:^(NSArray<GeneralMsg *> * _Nonnull generalMsgs, NSError * _Nonnull error) {
-        self.generalMsgArray = generalMsgs;
+        self.generalMsgArray = generalMsgs.mutableCopy;
         [self.tableView.refreshControl endRefreshing];
         [self.tableView reloadData];
     }];
@@ -91,12 +92,63 @@
     
     GeneralMsg *generalMsg = self.generalMsgArray[indexPath.section];
     AppMsg *appMsg = [self appMsgArrayWithGeneralMsg:generalMsg][indexPath.row];
-    NSLog(@"%@", appMsg);
+    
+    if (appMsg.content_url.length == 0) return;
+    
+    NSString *shareTitle = appMsg.title;
+    UIImage *shareImage = [UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(40, 40)];
+    NSURL *shareUrl = [NSURL URLWithString:appMsg.content_url];
+    
+    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[shareTitle, shareImage, shareUrl] applicationActivities:nil];
+    vc.excludedActivityTypes = @[
+        UIActivityTypePostToFacebook,
+        UIActivityTypePostToTwitter,
+        UIActivityTypePostToWeibo,
+        UIActivityTypeMessage,
+        UIActivityTypeMail,
+        UIActivityTypeAddToReadingList,
+        UIActivityTypePostToFlickr,
+        UIActivityTypePostToVimeo,
+        UIActivityTypePostToTencentWeibo
+    ];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     GeneralMsg *generalMsg = self.generalMsgArray[section];
     return [GeneralMsgListHeaderView headerViewWithTableView:tableView datetime:generalMsg.datetime];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+        
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        GeneralMsg *generalMsg = self.generalMsgArray[indexPath.section];
+        AppMsg *appMsg = [self appMsgArrayWithGeneralMsg:generalMsg][indexPath.row];
+        
+        NSString *generalMsgId = generalMsg.id;
+        
+        [[GeneralMsgListManager shareInstance] deleteAppMsg:appMsg withGeneralMsg:generalMsg completed:^(GeneralMsg * _Nullable newGeneralMsg) {
+            
+            if (newGeneralMsg) {
+                [self.appMsgListMap removeObjectForKey:generalMsgId];
+                [self.generalMsgArray replaceObjectAtIndex:[self.generalMsgArray indexOfObject:generalMsg] withObject:newGeneralMsg];
+                [tableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
+            } else {
+                [self.appMsgListMap removeObjectForKey:generalMsgId];
+                [self.generalMsgArray removeObject:generalMsg];
+                [tableView deleteSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
+            }
+        }];
+    }
 }
 
 
