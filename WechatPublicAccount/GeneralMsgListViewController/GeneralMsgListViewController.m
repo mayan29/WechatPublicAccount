@@ -10,6 +10,7 @@
 #import "GeneralMsgListCell.h"
 #import "GeneralMsgListHeaderView.h"
 #import "GeneralMsgListImageViewController.h"
+#import "GeneralMsgContentViewController.h"
 #import "GeneralMsgListManager.h"
 #import "Account+CoreDataClass.h"
 #import <YYCategories.h>
@@ -102,23 +103,9 @@
     
     if (appMsg.content_url.length == 0) return;
     
-    NSString *shareTitle = appMsg.title;
-    UIImage *shareImage = [UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(40, 40)];
-    NSURL *shareUrl = [NSURL URLWithString:appMsg.content_url];
-    
-    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[shareTitle, shareImage, shareUrl] applicationActivities:nil];
-    vc.excludedActivityTypes = @[
-        UIActivityTypePostToFacebook,
-        UIActivityTypePostToTwitter,
-        UIActivityTypePostToWeibo,
-        UIActivityTypeMessage,
-        UIActivityTypeMail,
-        UIActivityTypeAddToReadingList,
-        UIActivityTypePostToFlickr,
-        UIActivityTypePostToVimeo,
-        UIActivityTypePostToTencentWeibo
-    ];
-    [self presentViewController:vc animated:YES completion:nil];
+    GeneralMsgContentViewController *vc = [[GeneralMsgContentViewController alloc] init];
+    vc.appMsg = appMsg;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
