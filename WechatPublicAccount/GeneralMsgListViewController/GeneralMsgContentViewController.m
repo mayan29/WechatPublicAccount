@@ -8,7 +8,6 @@
 
 #import "GeneralMsgContentViewController.h"
 #import "AppMsg+CoreDataClass.h"
-#import <YYCategories.h>
 #import <WebKit/WebKit.h>
 
 @interface GeneralMsgContentViewController ()
@@ -29,7 +28,7 @@
 
 - (void)share {
     NSString *shareTitle = self.appMsg.title;
-    UIImage  *shareImage = [UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(40, 40)];
+    UIImage  *shareImage = [UIImage imageNamed:@"icon"];
     NSURL    *shareUrl   = [NSURL URLWithString:self.appMsg.content_url];
     
     UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[shareTitle, shareImage, shareUrl] applicationActivities:nil];
