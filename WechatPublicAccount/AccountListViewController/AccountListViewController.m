@@ -50,7 +50,7 @@
 }
 
 - (void)fetchAccountsWithIsFromNetwork:(BOOL)isFromNetwork {
-    [[AccountListManager shareInstance] fetchAccountsWithIds:@[@"wow36kr"] isFromNetwork:isFromNetwork completed:^(NSArray<Account *> *accounts) {
+    [[AccountListManager shareInstance] fetchAccountsWithIds:@[@"wow36kr", @"ali_tech"] isFromNetwork:isFromNetwork completed:^(NSArray<Account *> *accounts) {
         self.accountArray = accounts;
         [self.tableView.refreshControl endRefreshing];
         [self.tableView reloadData];
