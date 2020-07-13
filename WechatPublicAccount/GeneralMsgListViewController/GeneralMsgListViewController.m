@@ -12,8 +12,7 @@
 #import "GeneralMsgListImageViewController.h"
 #import "GeneralMsgContentViewController.h"
 #import "GeneralMsgListManager.h"
-#import "Account+CoreDataClass.h"
-#import <YYCategories.h>
+#import "Account.h"
 
 @interface GeneralMsgListViewController ()
 

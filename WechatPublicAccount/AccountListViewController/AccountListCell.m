@@ -7,9 +7,7 @@
 //
 
 #import "AccountListCell.h"
-#import "Account+CoreDataClass.h"
-#import <YYCategories.h>
-#import <SDWebImage.h>
+#import "Account.h"
 
 @interface AccountListCell ()
 

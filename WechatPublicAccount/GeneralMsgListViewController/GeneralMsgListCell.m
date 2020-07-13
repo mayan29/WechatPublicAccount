@@ -8,8 +8,6 @@
 
 #import "GeneralMsgListCell.h"
 #import "AppMsg+CoreDataClass.h"
-#import <YYCategories.h>
-#import <SDWebImage.h>
 
 @interface GeneralMsgListCell ()
 

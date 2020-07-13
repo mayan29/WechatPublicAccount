@@ -7,7 +7,6 @@
 //
 
 #import "GeneralMsgListHeaderView.h"
-#import <YYCategories.h>
 
 @interface GeneralMsgListHeaderView ()
 

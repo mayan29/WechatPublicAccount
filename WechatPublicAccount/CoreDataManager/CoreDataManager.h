@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Account+CoreDataClass.h"
+#import "Account.h"
 #import "GeneralMsg+CoreDataClass.h"
 #import "AppMsg+CoreDataClass.h"
 
@@ -21,9 +21,6 @@ typedef void (^CoreDataManagerSaveCompletionHandler)(BOOL contextDidSave, NSErro
 
 - (void)setupCoreDataStack;
 - (void)cleanUp;
-
-- (void)updateAccountsWithDataArray:(NSArray *)dataArray completed:(CoreDataManagerSaveCompletionHandler)completedBlock;
-- (NSArray<Account *> *)accounts;
 
 - (void)updateGeneralMsgsWithDataArray:(NSArray *)dataArray accountId:(NSString *)accountId completed:(CoreDataManagerSaveCompletionHandler)completedBlock;
 - (NSArray<GeneralMsg *> *)generalMsgsWithAccountId:(NSString *)accountId;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>wow36kr</string>
+		<key>nick_name</key>
+		<string>36氪</string>
+		<key>desc</key>
+		<string>36氪是中国领先的新商业媒体，提供新锐深度的商业报道。我们强调趋势与价值，我们的slogan是：让一部分人先看到未来。</string>
+		<key>head_img_url</key>
+		<string>http://wx.qlogo.cn/mmhead/Q3auHgzwzM6bia44ArPNMqFIeUFznyuic1EJI0PVZfLL9NZ6PJZH4NaQ/0</string>
+		<key>zip_url</key>
+		<string>https://mayan29.oss-cn-beijing.aliyuncs.com/wechat-public-account/zip/wow36kr.zip</string>
+		<key>last_date_time</key>
+		<string>1574641295</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>ali_tech</string>
+		<key>nick_name</key>
+		<string>阿里技术</string>
+		<key>desc</key>
+		<string>阿里巴巴官方技术号，关于阿里的技术创新均呈现于此。</string>
+		<key>head_img_url</key>
+		<string>http://wx.qlogo.cn/mmhead/Q3auHgzwzM4yGEW4Je6O6aLExtOx3rQQBuXOXJgXFc2jRgWgdfw9Pw/0</string>
+		<key>zip_url</key>
+		<string>https://mayan29.oss-cn-beijing.aliyuncs.com/wechat-public-account/zip/ali_tech.zip</string>
+		<key>last_date_time</key>
+		<string>1581294600</string>
+	</dict>
+</array>
+</plist>

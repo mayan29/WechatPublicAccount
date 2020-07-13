@@ -7,7 +7,6 @@
 //
 
 #import "GeneralMsgListImageViewController.h"
-#import <SDWebImage.h>
 
 @interface GeneralMsgListImageViewController ()
 
