@@ -23,6 +23,8 @@
 		BCD8DC78238CB9D8000137AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC77238CB9D8000137AF /* Assets.xcassets */; };
 		BCD8DC7B238CB9D8000137AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC79238CB9D8000137AF /* LaunchScreen.storyboard */; };
 		BCD8DC7E238CB9D8000137AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC7D238CB9D8000137AF /* main.m */; };
+		BCF5DC5424BEA2C1000FD79F /* ali_tech.zip in Resources */ = {isa = PBXBuildFile; fileRef = BCF5DC5224BEA2C1000FD79F /* ali_tech.zip */; };
+		BCF5DC5524BEA2C1000FD79F /* wow36kr.zip in Resources */ = {isa = PBXBuildFile; fileRef = BCF5DC5324BEA2C1000FD79F /* wow36kr.zip */; };
 		BCF99EF524BC592D002D63F3 /* AccountList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF99EF424BC592D002D63F3 /* AccountList.plist */; };
 		BCF99EF824BC5C8F002D63F3 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF99EF724BC5C8F002D63F3 /* Account.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		BCD8DC7A238CB9D8000137AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD8DC7C238CB9D8000137AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD8DC7D238CB9D8000137AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCF5DC5224BEA2C1000FD79F /* ali_tech.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ali_tech.zip; sourceTree = "<group>"; };
+		BCF5DC5324BEA2C1000FD79F /* wow36kr.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = wow36kr.zip; sourceTree = "<group>"; };
 		BCF99EF424BC592D002D63F3 /* AccountList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountList.plist; sourceTree = "<group>"; };
 		BCF99EF624BC5C8F002D63F3 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		BCF99EF724BC5C8F002D63F3 /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				BCF99EF424BC592D002D63F3 /* AccountList.plist */,
+				BCF5DC5224BEA2C1000FD79F /* ali_tech.zip */,
+				BCF5DC5324BEA2C1000FD79F /* wow36kr.zip */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -239,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF99EF524BC592D002D63F3 /* AccountList.plist in Resources */,
+				BCF5DC5524BEA2C1000FD79F /* wow36kr.zip in Resources */,
 				BCD8DC7B238CB9D8000137AF /* LaunchScreen.storyboard in Resources */,
 				BCD8DC78238CB9D8000137AF /* Assets.xcassets in Resources */,
+				BCF5DC5424BEA2C1000FD79F /* ali_tech.zip in Resources */,
 				BCD8DC76238CB9D6000137AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
