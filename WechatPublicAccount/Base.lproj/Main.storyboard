@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="se3-jW-r6J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="se3-jW-r6J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Account-->
+        <!--订阅号-->
         <scene sceneID="ewk-y9-6Xl">
             <objects>
                 <tableViewController id="wiN-N2-zsN" customClass="AccountListViewController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                             <outlet property="delegate" destination="wiN-N2-zsN" id="nK9-Xc-DB2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Account" id="ObK-ic-SVd"/>
+                    <navigationItem key="navigationItem" title="订阅号" id="ObK-ic-SVd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyX-LN-7Ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

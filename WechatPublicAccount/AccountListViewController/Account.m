@@ -12,7 +12,7 @@
 @implementation Account
 
 + (NSArray<Account *> *)fetchAccountArray {
-    NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"accountList" ofType:@"plist"]];
+    NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AccountList" ofType:@"plist"]];
     return [Account mj_objectArrayWithKeyValuesArray:dictArray];
 }
 

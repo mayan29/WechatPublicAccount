@@ -23,7 +23,7 @@
 		BCD8DC78238CB9D8000137AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC77238CB9D8000137AF /* Assets.xcassets */; };
 		BCD8DC7B238CB9D8000137AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD8DC79238CB9D8000137AF /* LaunchScreen.storyboard */; };
 		BCD8DC7E238CB9D8000137AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD8DC7D238CB9D8000137AF /* main.m */; };
-		BCF99EF524BC592D002D63F3 /* accountList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF99EF424BC592D002D63F3 /* accountList.plist */; };
+		BCF99EF524BC592D002D63F3 /* AccountList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF99EF424BC592D002D63F3 /* AccountList.plist */; };
 		BCF99EF824BC5C8F002D63F3 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF99EF724BC5C8F002D63F3 /* Account.m */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		BCD8DC7A238CB9D8000137AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD8DC7C238CB9D8000137AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD8DC7D238CB9D8000137AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BCF99EF424BC592D002D63F3 /* accountList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = accountList.plist; sourceTree = "<group>"; };
+		BCF99EF424BC592D002D63F3 /* AccountList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AccountList.plist; sourceTree = "<group>"; };
 		BCF99EF624BC5C8F002D63F3 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		BCF99EF724BC5C8F002D63F3 /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		BCF99EF924BC647D002D63F3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -87,12 +87,12 @@
 		BC5A4057238E869400E6EAF2 /* AccountListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BC5A4058238E86B000E6EAF2 /* AccountListViewController.h */,
-				BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */,
-				BC5A405B238E86C900E6EAF2 /* AccountListCell.h */,
-				BC5A405C238E86C900E6EAF2 /* AccountListCell.m */,
 				BCF99EF624BC5C8F002D63F3 /* Account.h */,
 				BCF99EF724BC5C8F002D63F3 /* Account.m */,
+				BC5A405B238E86C900E6EAF2 /* AccountListCell.h */,
+				BC5A405C238E86C900E6EAF2 /* AccountListCell.m */,
+				BC5A4058238E86B000E6EAF2 /* AccountListViewController.h */,
+				BC5A4059238E86B000E6EAF2 /* AccountListViewController.m */,
 			);
 			path = AccountListViewController;
 			sourceTree = "<group>";
@@ -100,12 +100,12 @@
 		BC5A405E238E87E000E6EAF2 /* GeneralMsgListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BC5A405F238E87F700E6EAF2 /* GeneralMsgListViewController.h */,
-				BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */,
-				BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */,
-				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
 				BCB1D1BB2393835100023A94 /* GeneralMsgListHeaderView.h */,
 				BCB1D1BC2393835100023A94 /* GeneralMsgListHeaderView.m */,
+				BC5A4062238E880700E6EAF2 /* GeneralMsgListCell.h */,
+				BC5A4063238E880700E6EAF2 /* GeneralMsgListCell.m */,
+				BC5A405F238E87F700E6EAF2 /* GeneralMsgListViewController.h */,
+				BC5A4060238E87F700E6EAF2 /* GeneralMsgListViewController.m */,
 				BCB1D1C12393D83700023A94 /* GeneralMsgListImageViewController.h */,
 				BCB1D1C22393D83700023A94 /* GeneralMsgListImageViewController.m */,
 				BC31B7E123B09F66001B2345 /* GeneralMsgContentViewController.h */,
@@ -166,7 +166,7 @@
 		BCF99EF324BC58F7002D63F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BCF99EF424BC592D002D63F3 /* accountList.plist */,
+				BCF99EF424BC592D002D63F3 /* AccountList.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF99EF524BC592D002D63F3 /* accountList.plist in Resources */,
+				BCF99EF524BC592D002D63F3 /* AccountList.plist in Resources */,
 				BCD8DC7B238CB9D8000137AF /* LaunchScreen.storyboard in Resources */,
 				BCD8DC78238CB9D8000137AF /* Assets.xcassets in Resources */,
 				BCD8DC76238CB9D6000137AF /* Main.storyboard in Resources */,
